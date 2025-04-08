@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Machine Learning</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Home Page</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="generic.html">Projects</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="www.linkedin.com/in/gaohan-lin" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">December 2024</span>
+									<h1>Bank Customer<br />
+									Churn Prediction</h1>
+									
+									</header>
+									
+									<hr />
+									<h2>Objectives</h2>
+									<blockquote><li><b>Understand Factors Influencing Churn:</b> Analyze demographic, financial, and
+										behavioral data to uncover critical factors contributing to customer churn, such as
+										tenure, balance, and product usage.</li>
+									<li><b>Build Accurate Predictive Models:</b> Implement machine learning algorithms,
+										including Logistic Regression, Naive Bayes, Decision Trees, and Random Forests, to
+										assess churn likelihood and identify at-risk customers.</li>
+									<li><b>Design Targeted Retention Strategies:</b> Leverage predictive insights to develop
+										actionable recommendations, such as personalized offers, tailored engagement
+										strategies, and service enhancements, to improve customer satisfaction and loyalty.</li>
+									</blockquote>
+									
+									
+									<hr />
+									<h2>Methodology</h2>
+									<blockquote>
+										<li><b>Preprocessing:</b> Data cleaning, handling missing values, feature scaling, balancing class distribution with SMOTE and class weighting.</li>
+										<li><b>Modeling:</b> Built and compared four classification models:</li>
+										<li><b>Evaluation Metrics:</b> Accuracy, Precision, Recall, F1-Score, Confusion Matrix.</li>
+										<li><b>Comparison:</b> Compare model performance with and without class balancing techniques.</li>
+									</blockquote>
+									
+									
+
+									<hr />
+									<h2>Data Overview</h2>
+									<dl>
+										<dt>Data Source</dt>
+										<ul class="actions">
+											<li><a href="https://www.kaggle.com/datasets/shubhammeshram579/bank-customer-churn-prediction?resource=download" class="button primary icon solid fa-search">Kaggle: Bank Customer Churn Prediction</a></li>
+										</ul>
+										<dd>
+											<p>The dataset contains 10,002 entries with 12 features, including demographic, account, and transactional attributes. The target variable is Exited, indicating whether a customer churned.</p>
+										</dd>
+										<dt>Data Dictionary</dt>
+										<dd>
+											<p><div class="table-wrapper">
+												<table>
+													<thead>
+														<tr>
+															<th>Variable</th>
+															<th>Description</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Customer ID</td>
+															<td>A unique identifier for each customer.</td>
+														</tr>
+														<tr>
+															<td>Surname</td>
+															<td>The customer's surname or last name.</td>
+														</tr>
+														<tr>
+															<td>Credit Score</td>
+															<td>A numerical value representing the customer's credit score.</td>
+														</tr>
+														<tr>
+															<td>Gender</td>
+															<td>The customer's gender (1 = Female, 0 = Male).</td>
+														</tr>
+														<tr>
+															<td>Age</td>
+															<td>The customer's age.</td>
+														</tr>
+														<tr>
+															<td>Tenure</td>
+															<td>The number of years the customer has been with the bank.</td>
+														</tr>
+														<tr>
+															<td>Balance</td>
+															<td>The customer's account balance.</td>
+														</tr>
+														<tr>
+															<td>NumOfProducts</td>
+															<td>The number of bank products the customer uses (e.g., savings account, credit card)</td>
+														</tr>
+														<tr>
+															<td>HasCrCard</td>
+															<td>Whether the customer has a credit card (1 = yes, 0 = no)</td>
+														</tr>
+														<tr>
+															<td>IsActiveMember</td>
+															<td>Whether the customer is an active member (1 = yes, 0 = no).</td>
+														</tr>
+														<tr>
+															<td>EstimatedSalary</td>
+															<td>The estimated salary of the customer.</td>
+														</tr>
+														<tr>
+															<td>Exited</td>
+															<td>Whether the customer has churned (1 = yes, 0 = no).</td>
+														</tr>
+													</tfoot>
+												</table>
+											</div></p>
+										<dt>Descriptive Analysis</dt>
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4"><span class="image fit"><img src="visual/churn1.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="visual/churn2.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="visual/churn3.png" alt="" /></span></div>
+											</div>
+											
+										</div>
+										
+										<span class="image fit"><img src="visual/churn4.png" alt="" /></span>
+									</dl>
+									
+									<hr />
+									<h2>Modeling & Results</h2>
+									<h3>1. Logistic Regression</h3>
+									<li>No Preprocessing</li>
+									<pre><code>scaler = StandardScaler() 
+data['Balance'] = scaler.fit_transform(data[['Balance']])
+data['EstimatedSalary'] = scaler.fit_transform(data[['EstimatedSalary']])
+X = data[["CreditScore", "Gender", "Age", "Tenure", "Balance", "NumOfProducts", "HasCrCard", "IsActiveMember", "EstimatedSalary"]]
+y = data["Exited"]
+X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+										
+log_reg = LogisticRegression(max_iter=1000, solver='liblinear')
+log_reg.fit(X_train, y_train)
+</code></pre>
+									<span class="image fit"><img src="visual/LogisticRegression1.png" alt="" /></span>
+									<div class="box">
+										<p>From the combined results, Logistic Regression without pre-processing achieves the highest overall accuracy (81%) but struggles with class imbalance, as shown by the poor recall (14%) and F1-score (23%) for the churn class. SMOTE improves balance across classes, with a more consistent F1-score (67%) for both. Class weighting further enhances balance, achieving equal precision, recall, and F1-score (70%) for both churn and no-churn. Depending on the business focus, class weighting offers the best balance, while no pre-processing provides the highest raw accuracy.</p>
+									</div>
+
+									<h3>2. Naive Bayes</h3>
+									<li>No Preprocessing</li>
+									<pre><code>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+naive_bayes_model = GaussianNB()
+naive_bayes_model.fit(X_train, y_train)
+y_pred = naive_bayes_model.predict(X_test)</code></pre>
+									<span class="image fit"><img src="visual/NaiveBayes1.png" alt="" /></span>
+									<div class="box">
+										<p>SMOTE achieves the best balance between the “Churn” and “No-churn” classes, significantly improving recall (0.75) and F1-score (0.75) for the “Churn” class, while maintaining an overall accuracy of 83%. In contrast, the no pre-processing approach performs well for the “No-churn” class (F1-score: 0.90) but struggles with the “Churn” class (F1-score: 0.38). Class weighting provides balanced recall for both classes but at the cost of lower overall accuracy (74%).</p>
+									</div>
+
+									<h3>3. Decision Trees</h3>
+									<li>No Preprocessing</li>
+									<pre><code>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+model = DecisionTreeClassifier(random_state=42)
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)</code></pre>
+									<span class="image fit"><img src="visual/DecisionTree1.png" alt="" /></span>
+									<div class="box">
+										<p>The Decision Tree model exhibited varying performance across different configurations. SMOTE demonstrated the best results, achieving the highest recall and F1-score for the minority class while maintaining strong overall accuracy(85%). However, SMOTE led to a slight reduction in accuracy, likely due to overfitting caused by synthetic data. In comparison, balanced class weights showed moderate improvements but were less effective in addressing the imbalance for the minority class.</p>
+									</div>
+
+									<h3>4. Random Forest</h3>
+									<li>No Preprocessing</li>
+									<pre><code>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+rf_model = RandomForestClassifier(random_state=42, n_estimators=100, max_depth=None, class_weight=None)
+rf_model.fit(X_train, y_train)
+y_pred = rf_model.predict(X_test)</code></pre>
+									<span class="image fit"><img src="visual/RandomForest1.png" alt="" /></span>
+									<div class="box">
+										<p>All three methods achieved the same overall accuracy of 86%, indicating that they performed similarly in correctly classifying most instances. Combining the data on precision, recall, and F1-score, the performance of the three models is the same, so the bank can choose any one to use under the large model of random forest.</p>
+									</div>
+
+									<h3>Overall Comparison</h3>
+									<span class="image fit"><img src="visual/compare1.png" alt="" /></span>
+									<div class="box">
+										<p>Across all methods and models, <b>Random Forest</b> proved to be the most reliable choice. It balanced precision and recall effectively across both classes and demonstrated high overall accuracy, making it ideal for practical application in customer churn prediction scenarios.</p>
+									</div>
+									
+									<h3>Feature Importance</h3>
+									<pre><code>importances = rf_model.feature_importances_
+importance_dt = pd.DataFrame({
+	'Feature': X.columns,
+	'Importance': importances
+}).sort_values(by='Importance', ascending=False)</code></pre>
+									
+									<span class="image fit"><img src="visual/feature1.png" alt="" /></span>		
+									<div class="box">
+										<li><b>Age</b>: Older customers are more likely to churn.</li>
+										<li><b>Credit Score</b>: Lower scores are correlated with churn.</li>
+										<li><b>Active Membership</b>: Active users are less likely to churn.</li>
+										<li><b>Number of Products</b>: Single-product users churn more.</li>
+									</div>
+										
+
+									<hr />
+									<h2>Recommendations</h2>
+									<li><b>Prioritize Retention Efforts for Older Customers:</b> Develop age-specific engagement strategies, such as offering retirement planning services or tailored financial products.</li>
+									<li><b>Focus on Customers with Low Credit Scores:</b> Provide credit-building programs or proactive financial counseling to address churn risks in this segment.</li>
+									<li><b>Enhance Active Membership Engagement:</b> Implement loyalty rewards, personalized offers, or exclusive benefits to encourage continued activity and commitment.</li>
+									<li><b>Understand and Retain High-Balance Customers:</b> Offer premium banking services or exclusive wealth management solutions to meet their needs and expectations.</li>
+									<li><b>Deprioritize Non-Critical Variables:</b> Streamline retention efforts by focusing onimpactful features and allocating fewer resources to factors with minimal influence, such as credit card ownership or salary level.</li>
+
+									
+									<hr />
+									<h2>Tech Stack</h2>
+									<h4>Languages & Tools</h4>
+									<li><b>Python</b> – Data wrangling, modeling, and evaluation</li>
+									<li><b>Pandas/Numpy</b> – Data preprocessing</li>
+									<li><b>scikit-learn</b> – Implemented all ML models and metrics</li>
+									<li><b>Google Colab/Jupyter Notebook</b> – Cloud-based environment for running and sharing Python code</li>
+									<li><b>Matplotlib / Seaborn</b> – Exploratory Data Analysis & visualizations</li>
+									<h4> </h4>
+									<h4>Techniques & Methods</h4>
+									<li>Binary classification (Churn vs. No Churn)</li>
+									<li>Oversampling with SMOTE</li>
+									<li>Feature standardization</li>
+									<li>Model comparison & evaluation</li>
+
+									
+							<hr />
+							<ul class="actions fit">
+								<li><a href="index.html" class="button fit">Home Page</a></li>
+							</ul>
+
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section>
+							<h3>Phone</h3>
+							<p><a href="#">(626) 545-1610</a></p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">gaohanl@uci.edu</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="www.linkedin.com/in/gaohan-lin" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						
+						</section>
+					</footer>
+
+				
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

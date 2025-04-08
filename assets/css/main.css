@@ -144,14 +144,14 @@ input, select, textarea {
 		}
 
 	body {
-		color: #212931;
+		color: #49312beb;
 	}
 
 	body, input, select, textarea {
 		font-family: "Merriweather", Georgia, serif;
 		font-weight: 300;
-		font-size: 1rem;
-		line-height: 2.375;
+		font-size: 0.85rem;
+		line-height: 2.3;
 	}
 
 	a {
@@ -185,7 +185,6 @@ input, select, textarea {
 		font-weight: 900;
 		line-height: 1.5;
 		letter-spacing: 0.075em;
-		text-transform: uppercase;
 		margin: 0 0 1rem 0;
 	}
 
@@ -246,7 +245,7 @@ input, select, textarea {
 	code {
 		border: solid 2px;
 		font-family: "Courier New", monospace;
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 		margin: 0 0.25rem;
 		padding: 0.25rem 0.65rem;
 	}
@@ -254,7 +253,7 @@ input, select, textarea {
 	pre {
 		-webkit-overflow-scrolling: touch;
 		font-family: "Courier New", monospace;
-		font-size: 0.9rem;
+		font-size: 1rem;
 		margin: 0 0 2rem 0;
 	}
 
@@ -302,11 +301,11 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #212931;
+		color: #49312beb;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #212931;
+		color: #4a291af7;
 	}
 
 	blockquote {

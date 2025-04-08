@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Statistical Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Home Page</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="generic.html">Projects</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="www.linkedin.com/in/gaohan-lin" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">September 2024</span>
+									<h1>Gender Differences in Depression Factors:<br />A Statistical Analysis</h1>
+									
+									</header>
+									
+									<hr />
+									<h2>Research Question</h2>
+									<blockquote><b>Is there any difference in the factors between men and women having depression?</b></blockquote>
+
+									<hr />
+									<h2>Objectives</h2>
+									<p>Explore biological, social, and lifestyle factors associated with depression, and compare how they differ across genders.</p>
+									
+									<hr />
+									<h2>Methodology</h2>
+									<li>Descriptive statistics</li>
+									<li>Comparative analysis</li>
+									<li>Hypothesis Test</li>
+									
+
+									<hr />
+									<h2>Data Overview</h2>
+									<dl>
+										<ul class="actions">
+											<li><a href="https://www.kaggle.com/datasets/anthonytherrien/depression-dataset" class="button primary icon solid fa-search">Kaggle: Depression</a></li>
+										</ul>
+										<dd>
+											<p>This dataset contains information on individuals with various attributes related to their personal and lifestyle factors. It is designed to facilitate analysis in areas such as health, lifestyle, and socio-economic status. The factors in dataset are divided into the following three categories.</p>
+										</dd>
+										<dd>
+											<p><div class="table-wrapper">
+												<table>
+													<tbody>
+														<tr>
+															<td>Biological Factors</td>
+															<td>
+																<li>Family History of Depression</li>
+																<li>Chronic Medical Conditions</li>
+																<li>History of Mental Illness</li>
+																<li>History of Substance Abuse</li></td>
+														</tr>
+														<tr>
+															<td>Social Environmental Factors</td>
+															<td>
+																<li>Marital Status</li>
+																<li>Education Level</li>
+																<li>Number of Children</li>
+																<li>Employment Status</li>
+																<li>Income</li>
+															</td>
+														</tr>
+														<tr>
+															<td>Lifestyle Factors</td>
+															<td>
+																<li>Smoking Status</li>
+																<li>Physical Activity Level</li>
+																<li>Alcohol Consumption</li>
+																<li>Dietary Habits</li>
+																<li>Sleep Patterns</li>
+															</td>
+														</tr>
+													</tfoot>
+												</table>
+											</div></p>
+									</dl>
+									
+									<hr />
+									<h2>Statistical Analysis</h2>
+									<h3>Procedure</h3>
+									<p><div class="table-wrapper">
+										<table>
+											<tbody>
+												<tr>
+													<td>Create pivot tables</td>
+													<td>
+														<p>Used Excel pivot tables to identify key factors correlated with depression in men and women by analyzing relationships across variables.</p>
+													</td>
+												</tr>
+												<tr>
+													<td>Compare data</td>
+													<td>
+														<p>Conducted gender-based comparison to examine differences in data distribution both within and between genders.</p>
+													</td>
+												</tr>
+												<tr>
+													<td>Visualized Results</td>
+													<td>
+														<p>Used Excel and Tableau to generate charts and graphs for clear visual representation of findings and insights.</p>
+													</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div></p>
+
+
+									<h3>Results</h3>
+
+									<p>Among the various factors, the three that have the most significant impact on depression are as follows: <b>Marital Status</b> (Social Environmental Factors), <b>Physical Activity Level</b> (Lifestyle Factors), and <b>Dietary Habits</b> (Lifestyle Factors). It was found that people who are married, those with lower levels of physical activity, and those with poor dietary habits have higher rates of depression.</p>
+									<h4>1.Marital Status</h4>
+									<span class="image fit"><img src="visual/depression1.png" alt="" /></span>
+									<li>Hypothesis Test</li>
+									<div class="box">
+										<p>P1 = The proportion of female who get married<br />P2 = The proportion of male who get married<br />Ho: P1 - P2 = 0 <br />Ha: P1 - P2 != 0<br />P-value = 0.33 (>0.05), Do not reject Ho<br />The result shows that there is no difference between the proportion of female and male.</p>
+									</div>
+									
+									<h4>2.Physical Activity Level</h4>
+									<span class="image fit"><img src="visual/depression2.png" alt="" /></span>
+									<li>Hypothesis Test</li>
+									<div class="box">
+										<p>P1 = The proportion of female who have sedentary physical activity level<br />P2 = The proportion of male who have sedentary physical activity level<br />Ho: P1 - P2 = 0<br />Ha: P1 - P2 != 0<br />P-value = 0.33 (>0.05), Do not reject Ho<br />The result shows that there is no difference between the proportion of female and male.</p>
+									</div>
+
+									<h4>3.Dietary Habits</h4>
+									<span class="image fit"><img src="visual/depression3.png" alt="" /></span>
+									<li>Hypothesis Test</li>
+									<div class="box">
+										<p>P1 = The proportion of female who have unhealthy dietary habits<br />P2 = The proportion of male who have unhealthy dietary habits<br />Ho: P1 - P2 = 0<br />Ha: P1 - P2 != 0<br />P-value = 0.33 (>0.05), Do not reject Ho<br />The result shows that there is no difference between the proportion of female and male.</p>
+									</div>
+
+									<h3>Additional Visualizations</h3>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-6"><span class="image fit"><img src="visual/depression4.png" alt="" /></span></div>
+										</div>
+									</div>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-6"><span class="image fit"><img src="visual/depression5.png" alt="" /></span></div>
+										</div>
+									</div>
+									<span class="image fit"><img src="visual/depression6.png" alt="" /></span>
+
+									<hr />
+									<h2>Key Takeaways</h2>
+									<li><b>Main Influencing Factors:</b> Marital status, physical activity level, and dietary habits are key factors associated with depression.</li>
+									<li><b>No Significant Gender Difference:</b> There is no statistically significant difference between men and women in terms of factors influencing depression.</li>
+									<li><b>Lifestyle and Social Factors Matter More:</b> Lifestyle and social environmental factors have a greater impact on depression than biological factors.</li>
+									
+									<hr />
+									<h2>Implications</h2>
+									<li><b>Marriage Quality Affects Mental Health:</b> Marital dissatisfaction or conflict may contribute to depression. Programs that enhance communication and emotional support in marriages could help reduce the risk.</li>
+									<li><b>Promoting Physical Activity:</b> Sedentary lifestyles are linked to an increased risk of depression. Encouraging regular physical activity can improve both physical and mental well-being.</li>
+									<li><b>Healthy Diets Support Mental Health:</b> Poor dietary habits can lead to nutritional deficiencies that affect brain function and mood. Diets high in processed foods and low in nutrients may contribute to depression. Promoting healthy eating and meal planning could improve mental wellness.</li>
+									
+							<hr />
+							<ul class="actions fit">
+								<li><a href="index.html" class="button fit">Home Page</a></li>
+							</ul>
+
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section>
+							<h3>Phone</h3>
+							<p><a href="#">(626) 545-1610</a></p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">gaohanl@uci.edu</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="www.linkedin.com/in/gaohan-lin" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						
+						</section>
+					</footer>
+
+				
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

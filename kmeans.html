@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>K-Means Clustering</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Home Page</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="generic.html">Projects</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="www.linkedin.com/in/gaohan-lin" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">October 2024</span>
+									<h1>Airline Customer<br />
+									Segmentation</h1>
+									
+									</header>
+									
+									<hr />
+									<h2>Objectives</h2>
+									<blockquote>
+										<li>Identify key customer segments from reservation data.</li>
+										<li>Visualize segmentation insights for business decision-making.</li>
+										<li>Provide marketing recommendations to improve customer engagement.</li>
+									</blockquote>
+									
+									<hr />
+									<h2>Methodology</h2>
+									<blockquote><li>Data Preprocessing</li>
+										<li>K-Means Clustering</li>
+										<li>Segment Analysis</li>
+										<li>Data Visualization</li>
+										<li>Business Recommendations</li>
+									</blockquote>
+									
+									<hr />
+									<h2>Data Overview</h2>
+									<dl>
+										<dt>Clustering Data.csv</dt>
+										<dd>
+											<p>This file contains mostly numerical data, to be more compatible with clustering. The categorical variables have been converted to numerical values and all variables are normalized to a value between 0 and 1.</p>
+										</dd>
+										<dt>Main Data Dictionary</dt>
+										<dd>
+											<p><div class="table-wrapper">
+												<table>
+													<thead>
+														<tr>
+															<th>Columns</th>
+															<th>Description</th>
+															<th>Data Type</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Booking Channel</td>
+															<td>This represents how the passenger booked the flight.</td>
+															<td>Categorical</td>
+														</tr>
+														<tr>
+															<td>Base Fare Amount</td>
+															<td>This represents the amount of the base fare (without taxes) of all segments on the ticket.</td>
+															<td>Numerical</td>
+														</tr>
+														<tr>
+															<td>Ufly Member Number</td>
+															<td>This represents the Ufly member status. It will be either Standard or Elite.</td>
+															<td>Categorical</td>
+														</tr>
+														<tr>
+															<td>Group Size</td>
+															<td>This represents the size of the group if the trip consisted of more than one passenger.</td>
+															<td>Categorical</td>
+														</tr>
+														<tr>
+															<td>Age</td>
+															<td>This represents the age of the passenger at the time of flight.</td>
+															<td>Numerical</td>
+														</tr>
+													</tfoot>
+												</table>
+											</div></p>
+										
+									</dl>
+									
+									<hr />
+									<h2>Data Analysis</h2>
+									<dl>
+										<dt>Preprocessing</dt>
+										<dd>
+											<p>
+												<li>Checked and handled null values; normalized numerical columns for consistency.</li> 
+												<li>Encoded categorical features such as age_group, trip type, seasonality for clustering use.</li>
+											</p>
+										</dd>
+										<dt>Apply K-means</dt>
+										<dd>
+											<p>
+												<li>Key Code:</li>
+												<pre><code>inertia = []
+cluster_range = range(1, 21)
+for cluster_num in cluster_range:
+kmeans = KMeans(n_clusters=cluster_num, n_init='auto', random_state=42)
+kmeans.fit(clustering_data)
+inertia.append(kmeans.inertia_)</code></pre></p>
+											<P>
+												<li>Used the elbow method to determine the optimal number of clusters (K=5).</li>
+												<div class="box alt">
+													<div class="row gtr-50 gtr-uniform">
+														<div class="col-4"><span class="image fit"><img src="Visual/kmeans1.png" alt="" /></span></div>	
+													</div>
+												</div>
+												<li>Based on the K-Means method, 26,575 data are divided into 5 segments. 
+													<p><div class="table-wrapper">
+														<table>
+															<thead>
+																<tr>
+																	<th>Segment</th>
+																	<th>Numbers</th>
+																	<th>Description</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1</td>
+																	<td>7,135</td>
+																	<td>High-Spending Group Travelers</td>
+																</tr>
+																<tr>
+																	<td>2</td>
+																	<td>7,481</td>
+																	<td>Group Travelers with Moderate Spending</td>
+																</tr>
+																<tr>
+																	<td>3</td>
+																	<td>4,101</td>
+																	<td>Price Sensitive Young Travelers</td>
+																</tr>
+																<tr>
+																	<td>4</td>
+																	<td>4,348</td>
+																	<td>Solo Travelers with Moderate Spending</td>
+																</tr>
+																<tr>
+																	<td>5</td>
+																	<td>3,510</td>
+																	<td>Direct Booking Family and Group Travelers</td>
+																</tr>
+															</tfoot>
+														</table>
+													</div></p>
+													<div class="box alt">
+														<div class="row gtr-50 gtr-uniform">
+															<div class="col-4"><span class="image fit"><img src="Visual/kmeans2.png" alt="" /></span></div>	
+															<div class="col-4"><span class="image fit"><img src="Visual/kmeans0.png" alt="" /></span></div>	
+														</div>
+													</div>
+
+									<hr />
+									<h2>Visualization & Recommendations</h2>
+									<header>
+										<h3>Segment 1</h3>
+										<p><b>High-Spending Group Travelers</b></p>
+									</header>
+									<span class="image fit"><img src="visual/segment1.png" alt="" /></span>
+									<div class="box"><p>High-spending group travelers who are less loyal and frequently book through third-party platforms. For this customer, the company should offer group discounts, promote Ufly membership benefits, and enhance the online booking experience for group travelers.</p></div>
+
+									<header>
+										<h3>Segment 2</h3>
+										<p><b>Group Travelers with Moderate Spending</b></p>
+									</header>
+									<span class="image fit"><img src="visual/segment2.png" alt="" /></span>
+									<div class="box"><p>Group Travelers with Moderate Spending who prefer to book through Sun Country's website but have low loyalty program participation. For this customer, the company should also encourage Ufly membership and offer tailored group vacation packages.</p></div>
+
+									<header>
+										<h3>Segment 3</h3>
+										<p><b>Price Sensitive Young Travelers</b></p>
+									</header>
+									<span class="image fit"><img src="visual/segment3.png" alt="" /></span>
+									<div class="box"><p>Price Sensitive Young Travelers who prioritize low fares and use third-party platforms. For this customer, the company should promote affordable fares to them, increase awareness of third-party booking sites, and use social media to attract young travelers.</p></div>
+
+									<header>
+										<h3>Segment 4</h3>
+										<p><b>Solo Travelers with Moderate Spending</b></p>
+									</header>
+									<span class="image fit"><img src="visual/segment4.png" alt="" /></span>
+									<div class="box"><p>Solo Travelers with Moderate Spending who tend to book in advance and participate in the Ufly loyalty program. The company can attract this customer by offering early booking discounts, creating promotions for solo or small group travelers, and offering membership upgrade rewards.</p></div>
+
+									<header>
+										<h3>Segment 5</h3>
+										<p><b>Direct Booking Family and Group Travelers</b></p>
+									</header>
+									<span class="image fit"><img src="visual/segment5.png" alt="" /></span>
+									<div class="box"><p>The last group of customers are mainly non-loyalty program members who prefer to book directly through the airline website. The company can provide exclusive website booking offers, engage with customers through email and SMS, and offer free trials of Ufly membership.</p></div>
+									
+									<hr />
+									<h2>Tech Stack</h2>
+									<h4>Languages & Tools</h4>
+									<li><b>Python</b> – Used for data preprocessing, feature selection, and clustering analysis (K-Means)</li>
+									<li><b>Pandas</b> – Data manipulation and merging (e.g., merge(), handling missing values)</li>
+									<li><b>scikit-learn</b> – Applied KMeans for customer segmentation</li>
+									<li><b>Google Colab</b> – Cloud-based environment for running and sharing Python code</li>
+									<li><b>Matplotlib / Seaborn</b> – For generating visualizations in Python</li>
+									<h4> </h4>
+									<h4>Techniques & Methods</h4>
+									<li><b>K-Means Clustering</b> – Performed customer segmentation with 5 clusters</li>
+									<li><b>Data Normalization</b> – All variables normalized between 0 and 1</li>
+									<li><b>Feature Engineering</b> – Converted categorical variables to numerical format for clustering</li>
+									<li><b>Data Merging</b> – Joined cluster results with original reservation data for in-depth analysis</li>
+									<li><b>Data Visualization</b> – Visualized key characteristics of each customer segment using charts</li>
+
+									<hr />
+									<ul class="actions fit">
+										<li><a href="index.html" class="button fit">Home Page</a></li>
+									</ul>
+
+							</section>
+					</div>
+					
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section>
+							<h3>Phone</h3>
+							<p><a href="#">(626) 545-1610</a></p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">gaohanl@uci.edu</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="www.linkedin.com/in/gaohan-lin" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</footer>
+
+				
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

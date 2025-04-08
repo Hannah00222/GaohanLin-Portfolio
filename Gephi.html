@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Network Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Home Page</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="generic.html">Projects</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="www.linkedin.com/in/gaohan-lin" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">January 2025</span>
+									<h1>Twitch Influencer<br />Network Analysis</h1>
+									
+									</header>
+									
+									<hr />
+									<h2>Objectives</h2>
+									<blockquote>
+										<p>Identify the most impactful Twitch influencers to promote the launch of the video game <em>Thrive in Space 5</em> using Social Network Analysis (SNA).</p>
+									</blockquote>
+									
+									
+									<hr />
+									<h2>Methodology</h2>
+									<blockquote>
+										<li>Collected and analyzed Twitch user data, including streamer activity, views, affiliate status, and content type</li>
+									<li>Imported node and edge data into <b>Gephi</b> to visualize the Twitch user network</li>
+									<li>Applied key SNA metrics: <b>Degree Centrality</b>, <b>Betweenness Centrality</b>, and <b>Eigenvector Centrality</b></li>
+									<li>Selected top 3 influencers based on combined centrality scores and qualitative profile review</li>
+									</blockquote>
+									
+									
+
+									<hr />
+									<h2>Data Overview</h2>
+									<dl>
+										<dd>
+											<p>The dataset contains information on 7,126 Twitch streamers and 3,524 connections (follows) between them.</p>
+										</dd>
+										<dt>Data Dictionary</dt>
+										<dd>
+											<p><div class="table-wrapper">
+												<table>
+													<thead>
+														<tr>
+															<th>Column Name</th>
+															<th>Data Type</th>
+															<th>Count</th>
+															<th>Means</th>
+															<th>Median</th>
+															<th>Min</th>
+															<th>Max</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>ID</td>
+															<td>Integer</td>
+															<td>7126</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>Days_Active</td>
+															<td>Integer</td>
+															<td>7126</td>
+															<td>1,525</td>
+															<td>1,536</td>
+															<td>84</td>
+															<td>4,161</td>
+														</tr>
+														<tr>
+															<td>Mature_content</td>
+															<td>Boolean</td>
+															<td>7126</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>Views</td>
+															<td>Integer</td>
+															<td>7126</td>
+															<td>193,470</td>
+															<td>4,840</td>
+															<td>5</td>
+															<td>178,500,544</td>
+														</tr>
+														<tr>
+															<td>Affiliate</td>
+															<td>Boolean</td>
+															<td>7126</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>Channel_ID</td>
+															<td>Integer</td>
+															<td>7126</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														
+														
+													</tfoot>
+												</table>
+											</div></p>
+										<dt>Exploratory Data Analysis (EDA)</dt>
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4"><span class="image fit"><img src="visual/gephi1.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="visual/gephi2.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="visual/gephi3.png" alt="" /></span></div>
+											</div>
+										</div>
+									</dl>
+									
+									<hr />
+									<h2>Network Structure Analysis</h2>
+									<h3>Steps</h3>
+									<p><div class="table-wrapper">
+										<table>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>Calculate in-degree and out-degreeby clicking "Average Degree" and closeness and betweenness centrality by running "NetworkDiameter". Run the more intuitively titled "EigenvectorCentrality" to obtain eigenvector centrality scores.</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>Change the appearance of the nodes. 
+													<li>First, select the color distribution: select the betweenness centrality method in the Ranking method to sort.</li>
+													<li>Second, select Size: select the Ranking method to sort by betweenness centrality. Adjust the value of Max Size to 200.</li></td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>
+														<li>Select Layout Method: ForceAtlas 2</li>
+														<li>Change Scaling to 20</li>
+														<li>Choose Prevent Overlap.</li></td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>Select the node with the largest node size as a candidate for influencer.</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div></p>
+
+
+									<h4>Degree Centrality</h4>
+									<p>Degree centrality measures the number of direct connections a node has in the network. It is a simple count of edges connected to the node.</p>
+									<span class="image fit"><img src="visual/gephi4.png" alt="" /></span>
+									<h4>Betweenness Centrality</h4>
+									<p>If a node has a high Betweenness Centrality value, it means that the node often appears in the communication or information flow paths of other nodes in the network, acting as an “intermediary” or “bridge”.</p>
+									<span class="image fit"><img src="visual/gephi5.png" alt="" /></span>
+									<h4>Eigenvector Centrality</h4>
+									<p>Eigenvector centrality measures the influence of a node in the network, taking into account not just the number of connections (degree), but also the quality or importance of those connections. A node connected to other high-centrality nodes will have a higher eigenvector centrality score. It meets the requirements of the influencer we are looking for. </p>
+									<span class="image fit"><img src="visual/gephi6.png" alt="" /></span>
+
+									<div class="box">
+										<p>All three metrics lead to the same conclusion, i.e., <b>4949, 1773, 3401.</b> So we think there are strong reasons to prove that these three streamers can fulfill the role of influencer.</p>
+									</div>
+									
+									
+									<hr />
+									<h2>Top 3 Influencer</h2>
+									<p><div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>ID</th>
+													<th>Days Active</th>
+													<th>Mature Content</th>
+													<th>Views</th>
+													<th>Affiliate</th>
+													<th>Channel ID</th>
+													<th>Num of Sources</th>
+													<th>Profile</th>
+													<th>Live Channel</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>4949</td>
+													<td>2632</td>
+													<td>False</td>
+													<td>46,682,923</td>
+													<td>True</td>
+													<td>23735582</td>
+													<td>465</td>
+													<td><a href="https://twitchemotes.com/channels/23735582">Profile</a></td>
+													<td><a href="https://www.twitch.tv/sacriel">Live Channel</a></td>
+												</tr>
+												<tr>
+													<td>1773</td>
+													<td>2784</td>
+													<td>False</td>
+													<td>89,506,813</td>
+													<td>True</td>
+													<td>20786541</td>
+													<td>180</td>
+													<td><a href="https://twitchemotes.com/channels/20786541">Profile</a></td>
+													<td><a href="https://www.twitch.tv/yogscast">Live Channel</a></td>
+												</tr>
+												<tr>
+													<td>3401</td>
+													<td>2959</td>
+													<td>True</td>
+													<td>20,253,246</td>
+													<td>True</td>
+													<td>15310631</td>
+													<td>208</td>
+													<td><a href="https://twitchemotes.com/channels/15310631">Profile</a></td>
+													<td><a href="https://www.twitch.tv/greekgodx">Live Channel</a></td>
+												</tr>
+											</tfoot>
+										</table>
+									</div></p>
+									
+
+									<hr />
+									<h2>Business Implications</h2>
+									<li>Data-driven influencer selection: Using SNA allows brands to move beyond vanity metrics (like follower count) and identify influencers with true network influence, improving campaign efficiency.</li>
+									<li>Targeted audience reach: SNA helps pinpoint influencers who align closely with the game’s core demographic (e.g., young male Twitch users), leading to better audience-product fit.</li>
+									<li>Risk mitigation: By considering network position, content maturity, and affiliate status, companies can avoid controversial or misaligned partnerships.</li>
+									<li>Scalable strategy: This SNA-based approach can be applied to other platforms (YouTube, TikTok) and future campaigns to systematically identify high-impact influencers.</li>
+
+									
+									<hr />
+									<h2>Tech Stack</h2>
+									<h4>Tools</h4>
+									<li><b>Gephi </b> – Open-source network analysis and visualization tool for processing Twitch user network data</li>
+
+									<h4> </h4>
+									<h4>Techniques</h4>
+									<li><b>Social Network Analysis (SNA)</b> – Core methodology for identifying key influencers based on network structure</li>
+									<li><b>Degree Centrality</b> – Measures direct connections of a user (reach)</li>
+									<li><b>Betweenness Centrality</b> – Identifies users that serve as key bridges in the network</li>
+									<li><b>Eigenvector Centrality</b> – Quantifies overall influence based on connections to other important nodes</li>
+
+									
+							<hr />
+							<ul class="actions fit">
+								<li><a href="index.html" class="button fit">Home Page</a></li>
+							</ul>
+
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section>
+							<h3>Phone</h3>
+							<p><a href="#">(626) 545-1610</a></p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">gaohanl@uci.edu</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="www.linkedin.com/in/gaohan-lin" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						
+						</section>
+					</footer>
+
+				
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

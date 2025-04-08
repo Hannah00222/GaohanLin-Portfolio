@@ -1,32 +1,68 @@
-Massively by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# 📊 Gaohan Lin – Data & Business Analytics Portfolio
 
+Welcome! This is a curated portfolio of my data and analytics projects, showcasing my experience in data analysis, machine learning, marketing analytics, and data engineering. These projects were developed during my graduate studies at the University of California, Irvine and personal exploration.
 
-This is Massively, a text-heavy, article-oriented design built around a huge background
-image (with a new parallax implementation I'm testing) and scroll effects (powered by
-Scrollex). A *slight* departure from all the one-pagers I've been doing lately, but one
-that fulfills a few user requests and makes use of some new techniques I've been wanting
-to try out. Enjoy it :)
+---
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+## 🧠 Project Highlights
 
-(* = not included)
+### 🧬 1. Gender Differences in Depression Factors  
+**Date:** September 2024  
+**Description:**  
+A statistical analysis investigating the social, biological, and lifestyle factors associated with depression, and how they differ across gender.  
+**Skills:** Descriptive Statistics | Hypothesis Testing | Data Visualization
 
-AJ
-aj@lkn.io | @ajlkn
+---
 
+### ✈️ 2. Airline Customer Segmentation  
+**Date:** October 2024  
+**Description:**  
+Used K-Means clustering to segment airline customers based on behavioral features to inform targeted marketing strategies.  
+**Skills:** Python | K-Means Clustering | Data Visualization
 
-Credits:
+---
 
-	Demo Images:
-		Unsplash (unsplash.com)
+### 🔁 3. Bank Customer Churn Prediction  
+**Date:** December 2024  
+**Description:**  
+Built a machine learning model to predict customer churn and support retention strategy development.  
+**Skills:** Python | Logistic Regression | Naive Bayes | Decision Tree | Random Forest
 
-	Icons:
-		Font Awesome (fontawesome.io)
+---
 
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+### 🕹️ 4. Twitch Influencer Network Analysis  
+**Date:** January 2025  
+**Description:**  
+Applied social network analysis to identify top Twitch influencers based on centrality and engagement metrics for a gaming campaign.  
+**Skills:** Gephi | Python | EDA | Social Network Analysis
+
+---
+
+### 🛍️ 5. Women's E-commerce Clothing Reviews Analysis  
+**Date:** February 2025  
+**Description:**  
+Used NLP and machine learning to extract insights from customer reviews and predict product recommendations.  
+**Skills:** Python | EDA | Text Preprocessing | Text Mining | LDA | Sentiment Analysis | Classification
+
+---
+
+### 🧠 6. Y Combinator Startup Database  
+**Date:** March 2025  
+**Description:**  
+Designed a relational database to explore patterns in founder backgrounds and startup industries in Y Combinator portfolio companies.  
+**Skills:** SQL | ER Diagram | Relational Data Model | As-is Dependency Diagram
+
+---
+
+## 🚀 Technologies Used
+- **Languages:** Python, SQL, HTML
+- **Tools:** Tableau, Power BI, Excel, Gephi
+- **Libraries:** scikit-learn, pandas, NumPy, NLTK, spaCy, matplotlib
+- **Concepts:** Machine Learning, NLP, Clustering, Hypothesis Testing, Data Modeling
+
+---
+
+## 📬 Contact
+Gaohan Lin  
+📧 gaohanl@uci.edu  
+🌐 [LinkedIn](https://www.linkedin.com/in/gaohan-lin)  
