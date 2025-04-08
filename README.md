@@ -6,7 +6,7 @@ Welcome! This is a curated portfolio of my data and analytics projects, showcasi
 
 ## 🧠 Project Highlights
 
-### 🧬 1. Gender Differences in Depression Factors  
+### 🔍 1. Gender Differences in Depression Factors  
 **Date:** September 2024  
 **Description:**  
 A statistical analysis investigating the social, biological, and lifestyle factors associated with depression, and how they differ across gender.  
@@ -22,7 +22,7 @@ Used K-Means clustering to segment airline customers based on behavioral feature
 
 ---
 
-### 🔁 3. Bank Customer Churn Prediction  
+### 💳 3. Bank Customer Churn Prediction  
 **Date:** December 2024  
 **Description:**  
 Built a machine learning model to predict customer churn and support retention strategy development.  
@@ -33,7 +33,7 @@ Built a machine learning model to predict customer churn and support retention s
 ### 🕹️ 4. Twitch Influencer Network Analysis  
 **Date:** January 2025  
 **Description:**  
-Applied social network analysis to identify top Twitch influencers based on centrality and engagement metrics for a gaming campaign.  
+Applied social network analysis to identify top Twitch influencers based on centrality and engagement metrics.  
 **Skills:** Gephi | Python | EDA | Social Network Analysis
 
 ---
@@ -42,27 +42,26 @@ Applied social network analysis to identify top Twitch influencers based on cent
 **Date:** February 2025  
 **Description:**  
 Used NLP and machine learning to extract insights from customer reviews and predict product recommendations.  
-**Skills:** Python | EDA | Text Preprocessing | Text Mining | LDA | Sentiment Analysis | Classification
+**Skills:** Python | Text Preprocessing | Text Mining | Sentiment Analysis | Classification | LDA
 
 ---
 
-### 🧠 6. Y Combinator Startup Database  
+### 🗃️ 6. Y Combinator Startup Database  
 **Date:** March 2025  
 **Description:**  
-Designed a relational database to explore patterns in founder backgrounds and startup industries in Y Combinator portfolio companies.  
-**Skills:** SQL | ER Diagram | Relational Data Model | As-is Dependency Diagram
+Designed a relational database to explore patterns in founder backgrounds and startup industries.  
+**Skills:** SQL | ER Diagram | Relational Data Modeling | Dependency Diagram
 
 ---
 
-## 🚀 Technologies Used
-- **Languages:** Python, SQL, HTML
-- **Tools:** Tableau, Power BI, Excel, Gephi
-- **Libraries:** scikit-learn, pandas, NumPy, NLTK, spaCy, matplotlib
-- **Concepts:** Machine Learning, NLP, Clustering, Hypothesis Testing, Data Modeling
+## 🚀 Tools & Technologies  
+Python • SQL • Tableau • Power BI • Excel • Gephi  
+Scikit-learn • Pandas • Numpy • NLTK • spaCy  
+Data Visualization • Machine Learning • Clustering • NLP • Hypothesis Testing
 
 ---
 
-## 📬 Contact
-Gaohan Lin  
+## 📬 Contact  
+**Gaohan Lin**  
 📧 gaohanl@uci.edu  
-🌐 [LinkedIn](https://www.linkedin.com/in/gaohan-lin)  
+🌐 [LinkedIn](https://www.linkedin.com/in/gaohan-lin)
